@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Dummy-Text-Generator",
+    "description": "A dummy text generator for Chrome or Ms Edge",
+    "version": "0.0.1",
+    "author": "marcuwynu23",
+
+    "content_scripts": [{
+        "js": [
+            "src/scripts/vendor/jquery.min.js",
+            "src/scripts/inject/inject.js"
+        ],
+        "css": [
+            "src/styles/vendor/bootstrap.min.css",
+            "src/styles/style.css"
+        ],
+        "matches": ["\u003Call_urls>", "http://*/*", "https://*/*"]
+    }],
+    "permissions": ["activeTab", "tabs", "contextMenus"]
+}
