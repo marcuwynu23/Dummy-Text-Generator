@@ -12,13 +12,10 @@
 }
 
 
-button {
+.mnav-item-btn {
 	border: none;
 	border-radius: 45px;
 	padding: 5px 10px;
-}
-
-.nav-item-btn {
 	background: #444444;
 	color: #fff;
 	padding: 5px 10px;
@@ -27,7 +24,10 @@ button {
 	margin: 5px 0;
 }
 
-.close-btn {
+.mclose-btn {
+	border: none;
+	border-radius: 45px;
+	padding: 5px 10px;
 	border-radius: 45px;
 	background: red;
 	color: #fff;
@@ -39,7 +39,10 @@ button {
 	margin-right: 5px;
 }
 
-.copy-btn {
+.mcopy-btn {
+	border: none;
+	border-radius: 45px;
+	padding: 5px 10px;
 	border-radius: 45px;
 	background: green;
 	color: #fff;
