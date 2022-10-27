@@ -1,27 +1,27 @@
 //Now add the jQuery
 $(document).ready(function () { //Just starting up here
 	$("body").append(`
-	<div class="menu container w-25">
+	<div class="mmenu container w-25">
 	<button id="close" class="mclose-btn">Close</button>
-	<p class="fw-bold text-center h5 mt-2"> Dummy Text Generator</p>
-<p class="text-mute text-center" style="font-size:8pt">@marcuwynu23</p>
+	<p class="mtitle"> Dummy Text Generator</p>
+<p class="mauthor" style="font-size:8pt">@marcuwynu23</p>
 	<hr>
-	<div class="menu-item"><button class="mnav-item-btn btn-sm w-100" id="words">Words</button></div>
-	<div class="menu-item"><button class="mnav-item-btn btn-sm w-100" id="sentences">Sentences</button>
+	<div class="menu-item"><button class="mnav-item-btn" id="words">Words</button></div>
+	<div class="menu-item"><button class="mnav-item-btn" id="sentences">Sentences</button>
 	</div>
-	<div class="menu-item"><button class="mnav-item-btn btn-sm w-100" id="paragraphs">Paragraphs</button>
+	<div class="menu-item"><button class="mnav-item-btn" id="paragraphs">Paragraphs</button>
 	</div>
 <div>
 <div class="d-flex justify-content-center">
-<button	id="copy" class="mcopy-btn text-center">Copy</button>
+<button	id="copy" class="mcopy-btn">Copy</button>
 
 </div>
-<p id="result" class="m-2 p-3 text-mute"></p>
-
+<p class="mpreview">Preview</p>
+<p id="result" class="mresult-text"></p>
 </div>
 </div>`);
 
-	var menu = $('.menu');//get the menu
+	var menu = $('.mmenu');//get the menu
 	$(document).on('contextmenu', function (e) {//What this does is simply; if right-click, run function(contains an event)
 		e.preventDefault();//Prevent the default action: the normal right-click-menu to show
 		menu.css({
@@ -54,6 +54,7 @@ $(document).ready(function () { //Just starting up here
 	}
 
 	function getRandomSentences() {
+		// api get random sentence
 		fetch('https://baconipsum.com/api/?type=meat-and-filler&paras=1&format=text')
 			.then(response => response.text())
 			.then(data => {
@@ -66,7 +67,7 @@ $(document).ready(function () { //Just starting up here
 	}
 
 	function getRandomParagraphs() {
-		fetch('https://baconipsum.com/api/?type=meat-and-filler&paras=1&format=text')
+		fetch('https://baconipsum.com/api/?type=meat-and-filler&paras=3&format=text')
 			.then(response => response.text())
 			.then(data => {
 				$("#result").text(data);

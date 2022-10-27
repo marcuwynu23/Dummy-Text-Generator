@@ -1,11 +1,11 @@
 /* just some css to display it */
-.menu {
+.mmenu {
 	z-index: 9999 !important;
-	background: rgb(220, 220, 220);
+	background: rgb(44, 44, 44);
 	width: 100px;
 	padding: 10px 10px;
 	box-shadow: 0 0 10px -3px rgba(38, 38, 38, 0.3);
-	border: 1px solid #ccc;
+	border: 1px solid rgb(255, 255, 255) !important;
 	display: none;
 	position: absolute;
 	border-radius: 10px;
@@ -13,6 +13,7 @@
 
 
 .mnav-item-btn {
+	width: 100%;
 	border: none;
 	border-radius: 45px;
 	padding: 5px 10px;
@@ -49,4 +50,41 @@
 	display: inline-block;
 	text-align: center;
 	font-size: 7pt;
+}
+
+.mtitle,
+.mauthor,
+.mresult-text {
+	color: #ffffff;
+
+}
+
+.mtitle {
+	font-size: 12pt;
+	font-weight: bold;
+	padding: 0 12px;
+	text-align: center;
+}
+
+.mauthor {
+	color: lightgray;
+	font-size: 8pt;
+	font-weight: lighter;
+	text-align: center;
+}
+
+.mresult-text {
+	font-size: 10pt;
+	padding: 12px;
+	margin: 4px;
+	text-align: justify;
+	border: 1px solid grey;
+	border-radius: 3px;
+}
+
+.mpreview {
+	color: white;
+	font-weight: bolder;
+	font-size: 10pt;
+	margin: 2px 0;
 }
